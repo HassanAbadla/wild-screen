@@ -1,0 +1,49 @@
+.caveat-brush-regular {
+  font-family: "Caveat Brush", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.gradient {
+  background: linear-gradient(90deg, #ffffff 20%, #f6c505 100%) !important;
+  color-scheme: light;
+  forced-color-adjust: none;
+}
+.gradient2 {
+  background: linear-gradient(90deg, #ffffff 20%, #f3d459 100%) !important;
+  color-scheme: light;
+  forced-color-adjust: none;
+}
+input,
+textarea,
+p,
+h1,
+h3,
+h4,
+h5,
+h6,
+ul,
+li {
+  font-family: sans-serif !important;
+  font-weight: 500;
+  font-size: 22px;
+}
+svg {
+  color-scheme: light;
+}
+
+/* If your SVGs are using currentColor, add these specific rules */
+[data-theme="dark"] svg {
+  filter: none;
+  color: inherit;
+}
+
+/* If your SVGs are inline or using img tags */
+[data-theme="dark"] img[src$=".svg"] {
+  filter: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+video::-webkit-media-controls {
+  display: none !important;
+}

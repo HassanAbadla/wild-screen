@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>
+      Wild Screen | Unleashed Creativity
+    </title>
+    <meta name="description" content="An Agancy provides multi media services for your business.">
+    <meta name="keywords" content="video editing, media, business, marketing, product, service, Unleashed Creativity">
+    <meta name="author" content="Wild Screen">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Wild screen | Unleashed Creativity">
+    <meta property="og:description" content="An Agancy provides multi media services for your business.">
+    <meta property="og:image" content="https://wild-screen.com/logo0.png">
+    <meta property="og:url" content="https://wild-screen.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Wild screen | Unleashed Creativity">
+    <meta name="twitter:description" content="An Agancy provides multi media services for your business.">
+    <meta name="twitter:image" content="https://wild-screen.com/logo0.png">
+    <link rel="canonical" href="https://wild-screen.com">
+    <link rel="icon" href="https://wild-screen.com/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"
+    />
+    <!--Replace with your tailwind.css once created-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="./assets/styles.css">
+
+    <!-- Define your gradient here - use online tools to find a gradient matching your branding-->
+    <style>
+      /* .gradient {
+        background: linear-gradient(90deg, #ffffff 20%, #f6c505 100%) !important;
+        color-scheme: light;
+        forced-color-adjust: none;
+      }
+      .gradient2 {
+        background: linear-gradient(90deg, #ffffff 20%, #f3d459 100%) !important;
+        color-scheme: light;
+        forced-color-adjust: none;
+      }
+      input, textarea, p, h1, h3, h4, h5, h6, ul, li {
+        font-family: sans-serif !important;
+        font-weight: 500;
+        font-size: 22px;
+      } */
+    </style>
+  </head>
+  <body
+    class="leading-normal tracking-normal text-white gradient"
+    style="font-family: 'Caveat Brush', sans-serif"
+  >
+    <!--Nav-->
+    <nav id="header" class=" fixed w-full z-30 top-0 text-white">
+      <div
+        class="w-full toggleColour container mx-auto flex flex-wrap items-center justify-between mt-0 py-2"
+      >
+        <div class="pl-4 toggleColour flex items-center caveat-brush-regular">
+          <a
+          class="toggleColour flex items-center gap-2 text-white no-underline hover:no-underline font-bold text-4xl lg:text-4xl "
+          href="/"
+          >
+          <img src="./assets/Logo0.png" alt="Wild screen" class="w-14 h-12">
+            
+            Wild Screen
+          </a>
+        </div>
+        <div class="block lg:hidden pr-4">
+          <button
+            id="nav-toggle"
+            class="flex items-center p-1 text-amber-500 hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+          >
+            <svg
+              class="fill-current h-6 w-6"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>Menu</title>
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20"
+          id="nav-content"
+        >
+          <ul class="list-reset lg:flex justify-end flex-1 items-centert ">
+            <li class="mr-3">
+              <a
+                class="inline-block py-2 px-4 text-black  no-underline"
+                href="#about"
+                >About</a
+              >
+            </li>
+            <li class="mr-3">
+              <a
+                class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+                href="#partners"
+                >Partners</a
+              >
+            </li>
+            <li class="mr-3">
+              <a
+                class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+                href="#contact"
+                >Contact</a
+              >
+            </li>
+          </ul>
+          
+        </div>
+      </div>
+      <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
+    </nav>
+    <!--Hero-->
+    <div class="pt-24 relative h-screen">
+      <video
+        autoplay
+        muted
+        loop
+        playsInline
+        disablePictureInPicture
+        webkit-playsinline
+        preload="auto"
+        controls={false}
+        class="absolute top-0 left-0 w-full h-full object-cover z-0"
+        style="pointer-events: none;"
+      >
+        <source src="./assets/videos/hero.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      
+      </div>
+    </div>
+    <div class="relative -mt-11 lg:-mt-20">
+      <svg
+        viewBox="0 0 1428 174"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+      >
+        <g stroke="orange" stroke-width="0.1" fill="none" fill-rule="evenodd">
+          <g
+            transform="translate(-2.000000, 44.000000)"
+            fill="#FFFFFF"
+            fill-rule="nonzero"
+          >
+            <path
+              d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496"
+              opacity="0.100000001"
+            ></path>
+            <path
+              d="M100,104.708498 C277.413333,72.2345949 426.147877,52.5246657 546.203633,45.5787101 C666.259389,38.6327546 810.524845,41.7979068 979,55.0741668 C931.069965,56.122511 810.303266,74.8455141 616.699903,111.243176 C423.096539,147.640838 250.863238,145.462612 100,104.708498 Z"
+              opacity="0.100000001"
+            ></path>
+            <path
+              d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z"
+              id="Path-4"
+              opacity="0.200000003"
+            ></path>
+          </g>
+          <g
+            transform="translate(-4.000000, 76.000000)"
+            fill="#FFFFFF"
+            fill-rule="nonzero"
+          >
+            <path
+              d="M0.457,34.035 C57.086,53.198 98.208,65.809 123.822,71.865 C181.454,85.495 234.295,90.29 272.033,93.459 C311.355,96.759 396.635,95.801 461.025,91.663 C486.76,90.01 518.727,86.372 556.926,80.752 C595.747,74.596 622.372,70.008 636.799,66.991 C663.913,61.324 712.501,49.503 727.605,46.128 C780.47,34.317 818.839,22.532 856.324,15.904 C922.689,4.169 955.676,2.522 1011.185,0.432 C1060.705,1.477 1097.39,3.129 1121.236,5.387 C1161.703,9.219 1208.621,17.821 1235.4,22.304 C1285.855,30.748 1354.351,47.432 1440.886,72.354 L1441.191,104.352 L1.121,104.031 L0.457,34.035 Z"
+            ></path>
+          </g>
+        </g>
+      </svg>
+    </div>
+    <section class="bg-white py-8" id="about">
+      <div class="container max-w-5xl mx-auto m-8">
+        <h2
+          class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800"
+        >
+          Creative Ads
+        </h2>
+        <div class="w-full mb-4">
+          <div
+            class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"
+          ></div>
+        </div>
+        <div class="flex flex-wrap">
+          <div class="w-5/6 sm:w-1/2 p-6 sm:my-auto animate__animated"  
+          data-aos="fade-top"
+          data-aos-duration="1000"
+          data-aos-once="false">
+            <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3 uppercase">
+              ad video editing
+            </h3>
+            <p class="text-gray-600 mb-8">
+              Professional ad video editing to enhance your brand’s message, boost engagement, and captivate audiences with creative, high-quality visuals.
+            </p>
+          </div>
+          <div class="w-full sm:w-1/2 p-6 animate__animated"  
+          data-aos="fade-bottom"
+          data-aos-duration="1000"
+          data-aos-once="false">
+            <img src="./assets/img/ads.gif" alt="Ads" class=" rounded-lg w-full h-full object-cover">
+          </div>
+        </div>
+        <div class="flex flex-wrap flex-col-reverse sm:flex-row">
+          <div class="w-full sm:w-1/2 p-6 mt-6 animate__animated"  
+          data-aos="fade-top"
+          data-aos-duration="1000"
+          data-aos-once="false">
+            <img src="./assets/img/camera.gif" alt="Camera" class=" rounded-lg w-full h-full object-cover">
+          </div>
+          <div class="w-full sm:w-1/2 p-6 sm:my-auto animate__animated"  
+          data-aos="fade-bottom"
+          data-aos-duration="1000"
+          data-aos-once="false">
+            <div class="align-middle">
+              <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3 uppercase">
+                engaging vlogs
+              </h3>
+              <p class="text-gray-600 mb-8">
+                Transform your raw footage into engaging vlogs with seamless editing, creative effects, and storytelling that captivates your audience.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-wrap">
+          <div class="w-5/6 sm:w-1/2 p-6 sm:my-auto animate__animated"  
+          data-aos="fade-top"
+          data-aos-duration="1000"
+          data-aos-once="false">
+            <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3 uppercase">
+              expert event video editing
+            </h3>
+            <p class="text-gray-600 mb-8">
+              Capture every moment with expert event video editing, delivering polished highlights, smooth transitions, and memorable storytelling for any occasion.
+            </p>
+          </div>
+          <div class="w-full sm:w-1/2 p-6 animate__animated"  
+          data-aos="fade-bottom"
+          data-aos-duration="1000"
+          data-aos-once="false">
+            <img src="./assets/img/moment.gif" alt="Ads" class=" rounded-lg w-full h-full object-cover">
+          </div>
+        </div>
+        <div class="flex flex-wrap flex-col-reverse sm:flex-row">
+          <div class="w-full sm:w-1/2 p-6 mt-6 animate__animated"  
+          data-aos="fade-top"
+          data-aos-duration="1000"
+          data-aos-once="false">
+            <img src="./assets/img/home.gif" alt="Camera" class=" rounded-lg w-full h-full object-cover">
+          </div>
+          <div class="w-full sm:w-1/2 p-6 sm:my-auto animate__animated"  
+          data-aos="fade-bottom"
+          data-aos-duration="1000"
+          data-aos-once="false">
+            <div class="align-middle">
+              <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3 uppercase">
+                Professional real estate
+              </h3>
+              <p class="text-gray-600 mb-8">
+                Property walkthroughs, color correction, transitions, and dynamic effects to enhance listings.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-white py-8" id="partners">
+      <div class="container mx-auto flex flex-wrap pt-4 pb-12">
+        <h2
+          class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800"
+        >
+          Partners
+        </h2>
+        <div class="w-full mb-4">
+          <div
+            class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"
+          ></div>
+        </div>
+        <div class="flex justify-center align-middle flex-wrap w-full mt-4 p-6 gap-14">
+          <img src="./assets/img/ash logo.png" alt="Ash Cafe" class="h-24 w-auto object-cover">
+          <img src="./assets/img/batta.png" alt="Ash Cafe" class="h-24 w-auto object-cover">
+          <img src="./assets/img/shadana.png" alt="Ash Cafe" class="h-24 w-auto object-cover">
+        </div>
+      </div>
+    </section>
+    
+    <!-- Change the colour #f8fafc to match the previous section colour -->
+    <svg
+      class="wave-top"
+      viewBox="0 0 1439 147"
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+    >
+      <g stroke="orange" stroke-width="0.2" fill="none" fill-rule="evenodd">
+        <g transform="translate(-1.000000, -14.000000)" fill-rule="nonzero">
+          <g class="wave" fill="white">
+            <path
+              d="M1440,84 C1383.555,64.3 1342.555,51.3 1317,45 C1259.5,30.824 1206.707,25.526 1169,22 C1129.711,18.326 1044.426,18.475 980,22 C954.25,23.409 922.25,26.742 884,32 C845.122,37.787 818.455,42.121 804,45 C776.833,50.41 728.136,61.77 713,65 C660.023,76.309 621.544,87.729 584,94 C517.525,105.104 484.525,106.438 429,108 C379.49,106.484 342.823,104.484 319,102 C278.571,97.783 231.737,88.736 205,84 C154.629,75.076 86.296,57.743 0,32 L0,0 L1440,0 L1440,84 Z"
+            ></path>
+          </g>
+          <g transform="translate(1.000000, 15.000000)" fill="black">
+            <g
+              transform="translate(719.500000, 68.500000) rotate(-180.000000) translate(-719.500000, -68.500000) "
+            >
+              <path
+                d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496"
+                opacity="0.100000001"
+              ></path>
+              <path
+                d="M100,104.708498 C277.413333,72.2345949 426.147877,52.5246657 546.203633,45.5787101 C666.259389,38.6327546 810.524845,41.7979068 979,55.0741668 C931.069965,56.122511 810.303266,74.8455141 616.699903,111.243176 C423.096539,147.640838 250.863238,145.462612 100,104.708498 Z"
+                opacity="0.100000001"
+              ></path>
+              <path
+                d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z"
+                opacity="0.200000003"
+              ></path>
+            </g>
+          </g>
+        </g>
+      </g>
+    </svg>
+    <section class=" mx-auto text-center py-6 mb-12 bg-white" id="contact">
+      <h2
+        class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800"
+      >
+        Feel free to share your thoughts
+      </h2>
+      <div class=" py-6 flex flex-col justify-center sm:py-12">
+        <div class="relative py-3 sm:max-w-xl sm:mx-auto">
+            <div
+                class="absolute inset-0 bg-amber-200 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl">
+            </div>
+            <div class="text-white relative px-4 py-10 bg-yellow-300 shadow-lg sm:rounded-3xl sm:p-20">
+    
+                <div class="text-center pb-6">
+                    <h1 class="text-3xl font-bold">Contact Us!</h1>
+    
+                    <p class="text-gray-500 ">
+                        Fill up the form below to send us a message.
+                    </p>
+                </div>
+    
+                <form action="https://formsubmit.co/ab.wildscreen@gmail.com" method="POST">
+                  <!-- Hidden configuration fields -->
+                  <input type="hidden" name="_captcha" value="false">
+                  <!-- <input type="hidden" name="_next" value="https://wild-screen.com/thanks.html"> -->
+                  
+                  <input
+                      class="shadow mb-4 appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      type="text" placeholder="Name" name="name">
+              
+                  <input
+                      class="shadow mb-4 appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      type="email" placeholder="Email" name="email">
+              
+                  <input
+                      class="shadow mb-4 appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      type="text" placeholder="Subject" name="_subject">
+              
+                  <textarea
+                      class="shadow mb-4 min-h-0 appearance-none border rounded-lg h-64 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      type="text" placeholder="Type your message here..." name="message" style="height: 121px;"></textarea>
+              
+                  <div class="flex justify-between">
+                      <input
+                          class="shadow flex-1 mx-2 bg-white hover:bg-gray-700 text-gray-800 hover:text-yellow-400 font-bold py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline cursor-pointer transition duration-300 ease-in-out"
+                          type="submit" value="Send ➤">
+                  </div>
+              </form>
+            </div>
+        </div>
+    </div>
+    </section>
+    <!--Footer-->
+    <footer class="flex justify-center align-middle">
+      <div class="container mx-auto px-8">
+        <div class="w-full flex flex-col md:flex-row py-6">
+          <div class="flex-1 mb-6 text-black">
+            <a
+            class="toggleColour flex items-center gap-2 text-white no-underline hover:no-underline font-bold text-4xl lg:text-4xl "
+            href="#"
+          >
+          <img src="./assets/Logo0.png" alt="Wild screen" class="w-14 h-12">
+            
+            Wild Screen
+          </a>
+          </div>
+          <!-- <div class="flex-1">
+            <p class="uppercase text-gray-500 md:mb-6">Links</p>
+            <ul class="list-reset mb-6">
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a
+                  href="#"
+                  class="no-underline hover:underline text-gray-800 hover:text-pink-500"
+                  >FAQ</a
+                >
+              </li>
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a
+                  href="#"
+                  class="no-underline hover:underline text-gray-800 hover:text-pink-500"
+                  >Help</a
+                >
+              </li>
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a
+                  href="#"
+                  class="no-underline hover:underline text-gray-800 hover:text-pink-500"
+                  >Support</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="flex-1">
+            <p class="uppercase text-gray-500 md:mb-6">Legal</p>
+            <ul class="list-reset mb-6">
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a
+                  href="#"
+                  class="no-underline hover:underline text-gray-800 hover:text-pink-500"
+                  >Terms</a
+                >
+              </li>
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a
+                  href="#"
+                  class="no-underline hover:underline text-gray-800 hover:text-pink-500"
+                  >Privacy</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="flex-1">
+            <p class="uppercase text-gray-500 md:mb-6">Social</p>
+            <ul class="list-reset mb-6">
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a
+                  href="#"
+                  class="no-underline hover:underline text-gray-800 hover:text-pink-500"
+                  >Facebook</a
+                >
+              </li>
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a
+                  href="#"
+                  class="no-underline hover:underline text-gray-800 hover:text-pink-500"
+                  >Linkedin</a
+                >
+              </li>
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a
+                  href="#"
+                  class="no-underline hover:underline text-gray-800 hover:text-pink-500"
+                  >Twitter</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="flex-1">
+            <p class="uppercase text-gray-500 md:mb-6">Company</p>
+            <ul class="list-reset mb-6">
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a
+                  href="#"
+                  class="no-underline hover:underline text-gray-800 hover:text-pink-500"
+                  >Official Blog</a
+                >
+              </li>
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a
+                  href="#"
+                  class="no-underline hover:underline text-gray-800 hover:text-pink-500"
+                  >About Us</a
+                >
+              </li>
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a
+                  href="#"
+                  class="no-underline hover:underline text-gray-800 hover:text-pink-500"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div> -->
+        </div>
+      </div>
+    </footer>
+    <!-- jQuery if you need it
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  -->
+    <script>
+      AOS.init();
+    </script>
+    <script>
+      var scrollpos = window.scrollY
+      var header = document.getElementById("header")
+      var navcontent = document.getElementById("nav-content")
+      var navaction = document.getElementById("navAction")
+      var brandname = document.getElementById("brandname")
+      var toToggle = document.querySelectorAll(".toggleColour")
+
+      document.addEventListener("scroll", function () {
+        /*Apply classes for slide in bar*/
+        scrollpos = window.scrollY
+
+        if (scrollpos > 10) {
+          header.classList.add("bg-white")
+          // navaction.classList.remove("bg-white")
+          // navaction.classList.add("gradient")
+          // navaction.classList.remove("text-gray-800")
+          // navaction.classList.add("text-white")
+          //Use to switch toggleColour colours
+          for (var i = 0; i < toToggle.length; i++) {
+            toToggle[i].classList.add("text-gray-800")
+            toToggle[i].classList.remove("text-white")
+          }
+          header.classList.add("shadow")
+          navcontent.classList.remove("bg-gray-100")
+          navcontent.classList.add("bg-white")
+        } else {
+          header.classList.remove("bg-white")
+          navaction.classList.remove("gradient")
+          navaction.classList.add("bg-white")
+          navaction.classList.remove("text-white")
+          navaction.classList.add("text-gray-800")
+          //Use to switch toggleColour colours
+          for (var i = 0; i < toToggle.length; i++) {
+            toToggle[i].classList.add("text-white")
+            toToggle[i].classList.remove("text-gray-800")
+          }
+
+          header.classList.remove("shadow")
+          navcontent.classList.remove("bg-white")
+          navcontent.classList.add("bg-gray-100")
+        }
+      })
+    </script>
+    <script>
+      /*Toggle dropdown list*/
+      /*https://gist.github.com/slavapas/593e8e50cf4cc16ac972afcbad4f70c8*/
+
+      var navMenuDiv = document.getElementById("nav-content")
+      var navMenu = document.getElementById("nav-toggle")
+
+      document.onclick = check
+      function check(e) {
+        var target = (e && e.target) || (event && event.srcElement)
+
+        //Nav Menu
+        if (!checkParent(target, navMenuDiv)) {
+          // click NOT on the menu
+          if (checkParent(target, navMenu)) {
+            // click on the link
+            if (navMenuDiv.classList.contains("hidden")) {
+              navMenuDiv.classList.remove("hidden")
+            } else {
+              navMenuDiv.classList.add("hidden")
+            }
+          } else {
+            // click both outside link and outside menu, hide menu
+            navMenuDiv.classList.add("hidden")
+          }
+        }
+      }
+      function checkParent(t, elm) {
+        while (t.parentNode) {
+          if (t == elm) {
+            return true
+          }
+          t = t.parentNode
+        }
+        return false
+      }
+    </script>
+    <script>
+      const form = document.querySelector('form');
+
+      form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          // Basic validation
+          const name = form.querySelector('input[name="name"]').value;
+          const email = form.querySelector('input[name="email"]').value;
+          const message = form.querySelector('textarea[name="message"]').value;
+          
+          if (!name || !email || !message) {
+              alert('Please fill in all fields');
+              return;
+          }
+          
+          // Email validation
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(email)) {
+              alert('Please enter a valid email address');
+              return;
+          }
+          
+          // If validation passes, submit the form
+          form.submit();
+      });
+    </script>
+  </body>
+</html>
