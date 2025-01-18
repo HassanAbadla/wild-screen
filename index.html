@@ -281,6 +281,70 @@
         </div>
       </div>
     </section>
+
+    <section class="bg-white py-8" id="services">
+      <div class="carousel">
+        <div class="carousel-track">
+          <div class="video-thumbnail">
+            <img src="./assets/img/sample1.png" alt="Video 1" class="w-full h-full object-cover"/>
+            <div class="video-preview">
+              <video muted loop>
+                <source
+                  src="./assets/videos/sample1.mp4"
+                  type="video/mp4"
+                />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+          <div class="video-thumbnail">
+            <img src="./assets/img/sample3.png" alt="Video 3" class="w-full h-full object-cover"/>
+            <div class="video-preview">
+              <video muted loop>
+                <source
+                  src="./assets/videos/sample3.mp4"
+                  type="video/mp4"
+                />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+          <div class="video-thumbnail">
+            <img src="./assets/img/sample2.png" alt="Video 2" class="w-full h-full object-cover"/>
+            <div class="video-preview">
+              <video muted loop>
+                <source
+                  src="./assets/videos/sample2.mp4"
+                  type="video/mp4"
+                />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+          
+          
+          <!-- Add more video thumbnails as needed -->
+        </div>
+        <!-- Navigation Arrows -->
+        <div class="arrow left absolute left-0 top-0 bottom-0 flex items-center justify-center w-16">
+          <div class="cursor-pointer text-white text-4xl hover:text-gray-300 leading-8 sm:leading-10 md:leading-10 lg:leading-10">&lsaquo;</div>
+      </div>
+      <div class="arrow right absolute right-0 top-0 bottom-0 flex items-center justify-center w-16">
+        <div class="cursor-pointer text-white text-4xl hover:text-gray-300 leading-8 sm:leading-10 md:leading-10 lg:leading-10">&rsaquo;</div>
+    </div>
+        <!-- <div class="arrow left">&lsaquo;</div>
+        <div class="arrow right">&rsaquo;</div> -->
+      </div>
+  
+      <div class="popup" id="videoPopup">
+        <span class="close-btn" id="closePopup">&times;</span>
+        <video id="popupVideo" controls>
+          <source src="" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </section>
+
     <section class="bg-white py-8" id="partners">
       <div class="container mx-auto flex flex-wrap pt-4 pb-12">
         <h2
@@ -617,5 +681,141 @@
           form.submit();
       });
     </script>
+<script>
+  // Handle hover previews
+  const thumbnails = document.querySelectorAll(".video-thumbnail")
+
+  thumbnails.forEach((thumbnail) => {
+    const preview = thumbnail.querySelector(".video-preview video")
+    thumbnail.addEventListener("mouseenter", () => {
+      preview.play()
+    })
+    thumbnail.addEventListener("mouseleave", () => {
+      preview.pause()
+      preview.currentTime = 0
+    })
+  })
+
+  // Handle popup
+  const popup = document.getElementById("videoPopup")
+  const popupVideo = document.getElementById("popupVideo")
+  const closePopup = document.getElementById("closePopup")
+
+  thumbnails.forEach((thumbnail) => {
+    thumbnail.addEventListener("click", () => {
+      const videoSrc = thumbnail
+        .querySelector("video source")
+        .getAttribute("src")
+      popupVideo.querySelector("source").setAttribute("src", videoSrc)
+      popupVideo.load()
+      popupVideo.play()
+      popup.style.display = "flex"
+    })
+  })
+
+  closePopup.addEventListener("click", () => {
+    popupVideo.pause()
+    popup.style.display = "none"
+  })
+
+  // Close popup when clicking outside the video
+  popup.addEventListener("click", (e) => {
+    if (e.target === popup) {
+      popupVideo.pause()
+      popup.style.display = "none"
+    }
+  })
+
+  // Navigation Arrows
+  const carousel = document.querySelector(".carousel")
+  const track = document.querySelector(".carousel-track")
+  const leftArrow = document.querySelector(".arrow.left")
+  const rightArrow = document.querySelector(".arrow.right")
+
+  let currentIndex = 0
+  const thumbnailsPerScreen = Math.floor(
+    carousel.clientWidth / thumbnails[0].clientWidth
+  )
+  const totalThumbnails = thumbnails.length
+
+  function updateArrows() {
+    if (currentIndex === 0) {
+      leftArrow.style.display = "none"
+    } else {
+      leftArrow.style.display = "block"
+    }
+
+    if (currentIndex + thumbnailsPerScreen >= totalThumbnails) {
+      rightArrow.style.display = "none"
+    } else {
+      rightArrow.style.display = "block"
+    }
+  }
+
+  updateArrows()
+
+  leftArrow.addEventListener("click", () => {
+    if (currentIndex > 0) {
+      currentIndex--
+      track.style.transform = `translateX(-${
+        currentIndex * (thumbnails[0].clientWidth + 20)
+      }px)`
+      updateArrows()
+    }
+  })
+
+  rightArrow.addEventListener("click", () => {
+    if (currentIndex + thumbnailsPerScreen < totalThumbnails) {
+      currentIndex++
+      track.style.transform = `translateX(-${
+        currentIndex * (thumbnails[0].clientWidth + 20)
+      }px)`
+      updateArrows()
+    }
+  })
+
+  // Swipe Support
+  let touchStartX = 0
+  let touchEndX = 0
+
+  carousel.addEventListener(
+    "touchstart",
+    (e) => {
+      touchStartX = e.changedTouches[0].screenX
+    },
+    false
+  )
+
+  carousel.addEventListener(
+    "touchend",
+    (e) => {
+      touchEndX = e.changedTouches[0].screenX
+      handleGesture()
+    },
+    false
+  )
+
+  function handleGesture() {
+    if (touchEndX < touchStartX - 50) {
+      // Swipe Left
+      if (currentIndex + thumbnailsPerScreen < totalThumbnails) {
+        currentIndex++
+        track.style.transform = `translateX(-${
+          currentIndex * (thumbnails[0].clientWidth + 20)
+        }px)`
+        updateArrows()
+      }
+    } else if (touchEndX > touchStartX + 50) {
+      // Swipe Right
+      if (currentIndex > 0) {
+        currentIndex--
+        track.style.transform = `translateX(-${
+          currentIndex * (thumbnails[0].clientWidth + 20)
+        }px)`
+        updateArrows()
+      }
+    }
+  }
+</script>
   </body>
 </html>
